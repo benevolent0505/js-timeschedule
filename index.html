@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Time Schedule</title>
+
+    <script src="./timeschedule.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <h1>時間割</h1>
+    <table id="time-table">
+      <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <section>
+      <h2>授業登録</h2>
+      <p><label>曜日:</label>
+        <select id="day">
+          <option value="0">日曜日</option>
+          <option value="1">月曜日</option>
+          <option value="2">火曜日</option>
+          <option value="3">水曜日</option>
+          <option value="4">木曜日</option>
+          <option value="5">金曜日</option>
+          <option value="6">土曜日</option>
+        </select>
+      </p>
+      <p><label>時限</label>
+        <select id="period">
+          <option value="1">1限</option>
+          <option value="2">2限</option>
+          <option value="3">3限</option>
+          <option value="4">4限</option>
+          <option value="5">5限</option>
+          <option value="6">6限</option>
+          <option value="7">7限</option>
+        </select>
+      </p>
+      <p><label>授業名:</label><input type="text" id="lesson"></p>
+      <p><button id="register">登録</button></p>
+    </section>
+
+    <section>
+      <h2>授業削除</h2>
+      <p><label>曜日:</label>
+        <select id="delete-day">
+          <option value="0">日曜日</option>
+          <option value="1">月曜日</option>
+          <option value="2">火曜日</option>
+          <option value="3">水曜日</option>
+          <option value="4">木曜日</option>
+          <option value="5">金曜日</option>
+          <option value="6">土曜日</option>
+        </select>
+      </p>
+      <p><label>時限</label>
+        <select id="delete-period">
+          <option value="1">1限</option>
+          <option value="2">2限</option>
+          <option value="3">3限</option>
+          <option value="4">4限</option>
+          <option value="5">5限</option>
+          <option value="6">6限</option>
+          <option value="7">7限</option>
+        </select>
+      </p>
+      <p><button id="delete">削除</button></p>
+    </section>
+
+    <section>
+      <h2>時間割読み込み</h2>
+      <button id="load">読み込み</button>
+    </section>
+
+    <section>
+      <h2>時間割保存</h2>
+      <button id="save">保存</button>
+    </section>
+  </body>
+</html>
