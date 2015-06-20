@@ -22,11 +22,7 @@ TimeSchedule.prototype = {
     }
   },
   getLesson: function(day, period) {
-    if (period) {
-      return this.timeSchedule[day][period-1];
-    } else {
-      return this.timeSchedule[day];
-    }
+    return this.timeSchedule[day][period-1];
   },
   deleteLesson: function(day, period) {
     if (this.timeSchedule[day][period-1]) {
