@@ -8,7 +8,7 @@ var STORAGE_NAME = 'time_schedule';
 
 var storage = {
   fetch: function () {
-    return JSON.parse(localStorage.getItem(STORAGE_NAME) || '[]');
+    return JSON.parse(localStorage.getItem(STORAGE_NAME));
   },
   save: function (todos) {
     localStorage.setItem(STORAGE_NAME, JSON.stringify(todos));
@@ -37,6 +37,6 @@ TimeSchedule.prototype = {
     storage.save(this.timeSchedule);
   },
   loadSchedule: function () {
-    this.timeSchedule =  storage.fetch();
+    this.timeSchedule =  storage.fetch() ? storage.fetch() : this.timeSchedule;
   }
 };

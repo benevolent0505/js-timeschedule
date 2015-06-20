@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (lessonName) {
           table.rows[i].cells[j].textContent = lessonName;
         } else {
-          table.rows[i].cells[j].textContent = "空";
+          table.rows[i].cells[j].textContent = "--";
         }
       }
     }
